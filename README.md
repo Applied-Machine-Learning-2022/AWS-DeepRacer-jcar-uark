@@ -3,17 +3,17 @@
 Name of your teams' final project
 -->
 # final-project
-## [National Action Council for Minorities in Engineering(NACME)](https://www.nacme.org) Google Applied Machine Learning Intensive (AMLI) at the `PARTICIPATING_UNIVERSITY`
+## [National Action Council for Minorities in Engineering(NACME)](https://www.nacme.org) Google Applied Machine Learning Intensive (AMLI) at the `University of Arkansas`
 
 <!--
 List all of the members who developed the project and
 link to each members respective GitHub profile
 -->
 Developed by: 
-- [member1](https://github.com/cbaker6) - `STUDENTS_UNIVERSITY`
-- [member2](https://github.com/cbaker6) - `STUDENTS_UNIVERSITY` 
-- [member3](https://github.com/cbaker6) - `STUDENTS_UNIVERSITY` 
-- [member4](https://github.com/cbaker6) - `STUDENTS_UNIVERSITY`
+- [Ahmed Moustafa](https://github.com/a-mufasa) - `University of Arkansas`
+- [Ramiro Gonzalez](https://github.com/ramirog034) - `University of Arkansas` 
+- [Jaydyn Odor](https://github.com/Jodor101) - `University of Arkansas` 
+- [Cris Torres](https://github.com/CristopherTorres1) - `Penn State University`
 
 ## Description
 <!--
