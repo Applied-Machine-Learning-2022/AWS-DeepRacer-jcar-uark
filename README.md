@@ -87,6 +87,7 @@ The waypoints parameter is an ordered list of milestones along the track center.
 <img width="660" src="https://user-images.githubusercontent.com/106926636/180839557-41dbc386-6320-4c9e-bc54-5d0e1f0e856a.png">
 </p>
 It is possible to retrieve the coordinates of any desired milestone at any point. This fact can be used to determine a corner in the future. The following code block makes heavy use of code from the following github file: https://github.com/MatthewSuntup/DeepRacer/blob/master/reward/reward_final.py .
+
 ```python
 #############################
 # waypoints, heavy use of code from https://github.com/MatthewSuntup/DeepRacer/blob/master/reward/reward_final.py
@@ -113,6 +114,24 @@ if (diff_heading > DIFF_HEADING_THRESHOLD) and speed >= SPEED_THRESHOLD:
     reward -= 4
 ```
 In the code block above, we find the previous milestone, next milestone, and a milestone 6 points in the future. We then calculate the measure (in degrees) of the current direction we are facing, and the direction we will face 6 points in the future. We find the difference between these two variables. If this difference is greater than a certain value (stored in DIFF_HEADING_THRESHOLD), it indicates that a corner exists close ahead of the agent at the time. If the difference is greater than the threshold and the agent is going faster than the speed threshold (stored in SPEED_THRESHOLD), we penalize the agent. This works to incentivize the agent to take corners more slowly.
+
+### Centerline Incentive
+The final part of the reward function was to incentivize the agent to stay near the centerline of the track. The following code is a modified version of the first default reward function given by the AWS DeepRacer console.
+
+```python
+############################
+# center line
+############################
+# Give higher reward if the car is closer to center line and vice versa
+if distance_from_center <= marker_1:
+    reward += 5
+elif distance_from_center <= marker_2:
+    reward += 4
+elif distance_from_center <= marker_3:
+    reward += 3
+else:
+    reward -= 4
+```
 
 ## Reward Graph
 The reward graph shows the model's progress as it trains. It is a line grpah with three lines: Average reward (training), Average percentage completion (training), and Average percentage completion (evaluating). The final reward graph is shown below.
