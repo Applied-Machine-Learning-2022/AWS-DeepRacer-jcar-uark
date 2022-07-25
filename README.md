@@ -31,7 +31,7 @@ Give details on how to install fork and install your project. You can get all of
 4. ....
 
 ## Final Model: Training Configuration
-The screenshot below shows the training configuration for the final model. This includes the action space, which is where we set the maximum and minimum speeds for the agent, as well as the maximum and minimum steering angles. Additionally, the screenshot shows the settings for the hyperparameters, which were not altered for the final model.
+The screenshot below shows the training configuration for the final model. This includes the action space, which is where we set the maximum and minimum speeds for the agent, as well as the maximum and minimum steering angles. Additionally, the screenshot shows the settings for the hyperparameters, which were not altered for the final model. A separate model, using the same reward function but an increased gradient descent batch size, number of experience episodes between each policy-updating iteration, and decreased learning rate led to much more consistent training, but slower peformance upon evaluation.
 
 <p align="center">
 <img width="760" src="https://user-images.githubusercontent.com/106926636/180805730-75d1d410-3614-4d55-ae27-5ac9c8bc1f97.png">
