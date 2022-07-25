@@ -28,3 +28,9 @@ Give details on how to install fork and install your project. You can get all of
 2. Change directories into your project
 3. On the command line, type `pip3 install requirements.txt`
 4. ....
+
+## Training Configuration
+<!--
+The screenshot below shows the training configuration for the final model. This includes the action space, which is where we set the maximum and minimum speeds for the agent, as well as the maximum and minimum steering angles. Additionally, the screenshot shows the settings for the hyperparameters, which were not altered for the final model.
+![rg-model6-2 Training Configuration](https://user-images.githubusercontent.com/106926636/180805730-75d1d410-3614-4d55-ae27-5ac9c8bc1f97.png)
+
