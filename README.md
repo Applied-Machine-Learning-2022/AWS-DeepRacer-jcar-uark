@@ -40,17 +40,19 @@ The screenshot below shows the training configuration for the final model. This 
 The reward graph shows the model's progress as it trains. It is a line grpah with three lines: Average reward (training), Average percentage completion (training), and Average percentage completion (evaluating). The final reward graph is shown below.
 
 <p align="center">
-<img width="460" src="https://user-images.githubusercontent.com/106926636/180807406-0687d125-6b2a-4c51-a6ab-4313d2b24c7d.png">
+<img width="520" src="https://user-images.githubusercontent.com/106926636/180807406-0687d125-6b2a-4c51-a6ab-4313d2b24c7d.png">
 </p>
 
 ## Post-training evaluation
 After the training had completed, we evaluated the model using the same track that it trained on. The AWS Console allows us to perform multiple evaluations. Below, we show two evaluations that we performed, where the agent drove three laps around the track during each evaluation.
 
 <p align="center">
+First Evaluation
 <img width="460" src="https://user-images.githubusercontent.com/106926636/180807992-a0d72a01-a773-45d8-84d8-1a3f62a2698f.png">
 </p>
 
 <p align="center">
+Second Evaluation
 <img width="460" src="https://user-images.githubusercontent.com/106926636/180808030-ccb2eee6-9186-4bfb-9d8a-09e56a7c4e0c.png">
 </p>
 
