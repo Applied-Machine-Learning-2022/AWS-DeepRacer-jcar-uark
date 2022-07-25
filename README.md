@@ -148,9 +148,7 @@ After the training had completed, we evaluated the model using the same track th
 </p>
 <p align="center">
   
-#### Second Evaluation
-  </p>
-<p align="center">
+  #### Second Evaluation
 <img width="460" src="https://user-images.githubusercontent.com/106926636/180808030-ccb2eee6-9186-4bfb-9d8a-09e56a7c4e0c.png">
 </p>
 
