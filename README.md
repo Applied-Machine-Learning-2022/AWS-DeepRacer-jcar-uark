@@ -38,6 +38,7 @@ The screenshot below shows the training configuration for the final model. This 
 </p>
 
 ## Elements of Reward Function
+### Summary
 The following code block shows the first few lines for the reward function. Here, we give a brief summary of the reward function's incentives and penalties. We also read the input parameters to memory in order to use them throughout the rest of the function.
 ```python
   '''
@@ -54,6 +55,17 @@ The following code block shows the first few lines for the reward function. Here
   closest_waypoints = params['closest_waypoints']
   progress = params['progress']
   steps = params['steps']
+```
+### Progress
+After some research, we learned that the agent performs roughly 15 steps per second. The AWS DeepRacer Developer Guide (https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-reward-function-input.html?icmpid=docs_deepracer_console#reward-function-input-closest_waypoints) provides information regarding all of the parameters that we can modify in the reward function. The guide also provides code that shows examples of the paramaters in use. One of these examples uses the "progress" and "steps" paramaters in order to code a reward function that incentivizes the agent to make more progress more quickly.
+
+```python
+############################
+# steps and progress, check every 30 steps. the less steps it takes to reach 100% progress means finished faster
+############################
+    # reward less steps with greater progress if faster than 18 sec
+    if (steps % 20) == 0 and progress/100 > (steps/TOTAL_STEPS):
+        reward += progress - (steps/TOTAL_STEPS)*100
 ```
 
 ## Reward Graph
