@@ -38,7 +38,7 @@ The screenshot below shows the training configuration for the final model. This 
 </p>
 
 ## Elements of Reward Function
-### Summary
+### Initializing parameters
 The following code block shows the first few lines for the reward function. Here, we give a brief summary of the reward function's incentives and penalties. We also read the input parameters to memory in order to use them throughout the rest of the function. After we read in the parameters, we create three variables that hold values that we will later use to incentivize staying near center line of the track. We created thresholds and initialized the reward value in the final part of this code block.
 ```python
   '''
@@ -67,7 +67,7 @@ The following code block shows the first few lines for the reward function. Here
   TOTAL_STEPS = 270      # roughly 15 steps per second, 18 sec default lap
   reward = 5
 ```
-### Progress
+### Progress Incentive
 After some research, we learned that the agent performs roughly 15 steps per second. The AWS DeepRacer Developer Guide (https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-reward-function-input.html) provides information regarding all of the parameters that we can modify in the reward function. The guide also provides code that shows examples of the paramaters in use. One of these examples uses the "progress" and "steps" parameters in order to code a reward function that incentivizes the agent to make more progress more quickly. To write the code block below, we used the same logic, but modified the specific numbers.
 
 ```python
@@ -81,7 +81,12 @@ After some research, we learned that the agent performs roughly 15 steps per sec
 
 Essentially, the "TOTAL_STEPS" variable is calculated using 15 steps per second * 18 seconds. 18 is an arbitrary value that we decided on based on the performance of the model using a default reward function. Since the agent performs 15 steps per second, it should complete 270 steps in 18 seconds. If the agent has made more progress around the track than it would have if it was driving at a constant 18 second pace, the agent is rewarded. This reward is calculated based on how much further ahead it is than it would've been if driving at an 18 second pace. We check every 20 steps.
 
-### Waypoints
+### Waypoints Incentive
+The waypoints parameter is an ordered list of milestones along the track center. Each track has its own unique list of waypoints. Each milestone is described as a coordinate of (xw,i, yw,i). The image below helps to visualize the manner in which waypoints are placed along a track.
+<p align="center">
+<img width="660" src="https://user-images.githubusercontent.com/106926636/180839557-41dbc386-6320-4c9e-bc54-5d0e1f0e856a.png">
+</p>
+It is possible to retrieve the coordinates of any desired milestone at any point. This fact can be used to determine a corner in the future. The following code block makes heavy use of code from the following github file: https://github.com/MatthewSuntup/DeepRacer/blob/master/reward/reward_final.py .
 ```python
 #############################
 # waypoints, heavy use of code from https://github.com/MatthewSuntup/DeepRacer/blob/master/reward/reward_final.py
@@ -107,6 +112,7 @@ if diff_heading > 180:
 if (diff_heading > DIFF_HEADING_THRESHOLD) and speed >= SPEED_THRESHOLD:
     reward -= 4
 ```
+In the code block above, we find the previous milestone, next milestone, and a milestone 6 points in the future. We then calculate the measure (in degrees) of the current direction we are facing, and the direction we will face 6 points in the future. We find the difference between these two variables. If this difference is greater than a certain value (stored in DIFF_HEADING_THRESHOLD), it indicates that a corner exists close ahead of the agent at the time. If the difference is greater than the threshold and the agent is going faster than the speed threshold (stored in SPEED_THRESHOLD), we penalize the agent. This works to incentivize the agent to take corners more slowly.
 
 ## Reward Graph
 The reward graph shows the model's progress as it trains. It is a line grpah with three lines: Average reward (training), Average percentage completion (training), and Average percentage completion (evaluating). The final reward graph is shown below.
