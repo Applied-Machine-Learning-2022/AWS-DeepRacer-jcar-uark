@@ -41,6 +41,8 @@ The reward graph shows the model's progress as it trains. It is a line grpah wit
 After the training had completed, we evaluated the model using the same track that it trained on. The AWS Console allows us to perform multiple evaluations. Below, we show two evaluations that we performed, where the agent drove three laps around the track during each evaluation.
 ![rg-model6-2 Evaluation](https://user-images.githubusercontent.com/106926636/180807992-a0d72a01-a773-45d8-84d8-1a3f62a2698f.png)
 
-![rg-model6-2 Evaluation 2](https://user-images.githubusercontent.com/106926636/180808030-ccb2eee6-9186-4bfb-9d8a-09e56a7c4e0c.png)
+<p align="center">
+<img width="460" height="300" src="https://user-images.githubusercontent.com/106926636/180808030-ccb2eee6-9186-4bfb-9d8a-09e56a7c4e0c.png">
+</p>
 
 
