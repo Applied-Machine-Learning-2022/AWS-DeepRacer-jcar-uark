@@ -16,9 +16,10 @@ Developed by:
 - [Cris Torres](https://github.com/CristopherTorres1) - `Penn State University`
 
 ## Description
-<!--
-Give a short description on what your project accomplishes and what tools is uses. In addition, you can drop screenshots directly into your README file to add them to your README. Take these from your presentations.
--->
+According to the "Capstone Projects" pdf, the goal for this project is to train "1/18th" scale car to race autonomously using reinforcement learning."
+
+### Dataset
+Reinforcement learning differs from the other two branches of ...
 
 ## Usage instructions
 <!--
@@ -29,12 +30,31 @@ Give details on how to install fork and install your project. You can get all of
 3. On the command line, type `pip3 install requirements.txt`
 4. ....
 
-## Training Configuration
+## Final Model: Training Configuration
 The screenshot below shows the training configuration for the final model. This includes the action space, which is where we set the maximum and minimum speeds for the agent, as well as the maximum and minimum steering angles. Additionally, the screenshot shows the settings for the hyperparameters, which were not altered for the final model.
 
 <p align="center">
 <img width="760" src="https://user-images.githubusercontent.com/106926636/180805730-75d1d410-3614-4d55-ae27-5ac9c8bc1f97.png">
 </p>
+
+## Elements of Reward Function
+The following code block shows the first few lines for the reward function. Here, we give a brief summary of the reward function's incentives and penalties. We also read the input parameters to memory in order to use them throughout the rest of the function.
+```python
+  '''
+  Reward function that incentivizes more progress at a fast pace,
+  penalizes fast driving at corners, incentivizes staying near
+  center line of track, and penalizes driving away from center line
+  '''
+  
+  # Read input parameters
+  distance_from_center = params['distance_from_center']
+  track_width = params['track_width']
+  speed = params['speed']
+  waypoints = params['waypoints']
+  closest_waypoints = params['closest_waypoints']
+  progress = params['progress']
+  steps = params['steps']
+```
 
 ## Reward Graph
 The reward graph shows the model's progress as it trains. It is a line grpah with three lines: Average reward (training), Average percentage completion (training), and Average percentage completion (evaluating). The final reward graph is shown below.
