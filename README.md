@@ -68,7 +68,7 @@ The following code block shows the first few lines for the reward function. Here
   reward = 5
 ```
 ### Progress
-After some research, we learned that the agent performs roughly 15 steps per second. The AWS DeepRacer Developer Guide (https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-reward-function-input.html?icmpid=docs_deepracer_console#reward-function-input-closest_waypoints) provides information regarding all of the parameters that we can modify in the reward function. The guide also provides code that shows examples of the paramaters in use. One of these examples uses the "progress" and "steps" parameters in order to code a reward function that incentivizes the agent to make more progress more quickly. To write the code block below, we used the same logic, but modified the specific numbers.
+After some research, we learned that the agent performs roughly 15 steps per second. The AWS DeepRacer Developer Guide (https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-reward-function-input.html) provides information regarding all of the parameters that we can modify in the reward function. The guide also provides code that shows examples of the paramaters in use. One of these examples uses the "progress" and "steps" parameters in order to code a reward function that incentivizes the agent to make more progress more quickly. To write the code block below, we used the same logic, but modified the specific numbers.
 
 ```python
 ############################
@@ -80,6 +80,33 @@ After some research, we learned that the agent performs roughly 15 steps per sec
 ```
 
 Essentially, the "TOTAL_STEPS" variable is calculated using 15 steps per second * 18 seconds. 18 is an arbitrary value that we decided on based on the performance of the model using a default reward function. Since the agent performs 15 steps per second, it should complete 270 steps in 18 seconds. If the agent has made more progress around the track than it would have if it was driving at a constant 18 second pace, the agent is rewarded. This reward is calculated based on how much further ahead it is than it would've been if driving at an 18 second pace. We check every 20 steps.
+
+### Waypoints
+```python
+#############################
+# waypoints, heavy use of code from https://github.com/MatthewSuntup/DeepRacer/blob/master/reward/reward_final.py
+#############################
+# finding previous point, next point, and future point
+prev_point = waypoints[closest_waypoints[0]]
+next_point = waypoints[closest_waypoints[1]]
+future_point = waypoints[min(len(waypoints) - 1, closest_waypoints[1]+6)]
+    
+# calculate headings to waypoints
+heading_current = math.degrees(math.atan2(prev_point[1]-next_point[1], prev_point[0]-next_point[0]))
+heading_future = math.degrees(math.atan2(prev_point[1]-future_point[1], prev_point[0]-future_point[0]))
+    
+# calculate difference between headings
+# check we didn't choose reflex angle
+diff_heading = abs(heading_current-heading_future)
+if diff_heading > 180:
+    diff_heading = 360 - diff_heading
+    
+# if diff_heading > than threshold indicates turn
+# so when a turn is ahead (high diff_heading)
+# penalize high speed, reward slow speed
+if (diff_heading > DIFF_HEADING_THRESHOLD) and speed >= SPEED_THRESHOLD:
+    reward -= 4
+```
 
 ## Reward Graph
 The reward graph shows the model's progress as it trains. It is a line grpah with three lines: Average reward (training), Average percentage completion (training), and Average percentage completion (evaluating). The final reward graph is shown below.
