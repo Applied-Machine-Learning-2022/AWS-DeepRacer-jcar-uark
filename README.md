@@ -53,6 +53,7 @@ The screenshot below shows the training configuration for the final model. This 
 </p>
 
 ## Elements of Reward Function
+
 ### **Initializing parameters**
 <h4 align="center"> List of Variables for the Reward Function </h4>
 <p align="center">
