@@ -35,7 +35,9 @@ Give details on how to install fork and install your project. You can get all of
 
 ## Final Model: Training Configuration
 <h4 align="center"> re:Invent 2018 track </h4>
-![image](https://user-images.githubusercontent.com/90020418/181056919-da40df12-8db0-4f6e-9d47-897023ded8ca.png)
+<p align="center">
+<img width="760" src="https://user-images.githubusercontent.com/90020418/181056919-da40df12-8db0-4f6e-9d47-897023ded8ca.png">
+</p>
 
 
 ## Final Model: Training Configuration
