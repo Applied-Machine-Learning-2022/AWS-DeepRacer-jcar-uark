@@ -172,8 +172,11 @@ After the training had completed, we evaluated the model using the same track th
 ## Physical Testing
 The entire goal of the AWS DeepRacer project is the train a Reinforcement Learning model that can be inputted into a vehicle in the real-world. To truly test our model we built the vehicle with all the necessary sensors to collect data and extract the parameters for running our trained model from earlier.
 
-**images of robot, sensors, track + video of physical run go below
 ### **Building the Robot**
+<h4 align="center"> Unboxed AWS DeepRacer Kit </h4>
+<p align="center">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/90020418/181102800-a5562416-1b2e-47a3-8898-0e74327669ab.jpeg">
+</p>
 
 ### **Building the Track**
 
