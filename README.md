@@ -178,8 +178,16 @@ The entire goal of the AWS DeepRacer project is the train a Reinforcement Learni
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/90020418/181102800-a5562416-1b2e-47a3-8898-0e74327669ab.jpeg">
 </p>
 
+**final robot then the control panel connected using IP (with explanation of the panel & calibration).
+**
 ### **Building the Track**
+<h4 align="center">re:Invent 2018 Track Template</h4>
+<p align="center">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/90020418/181114569-9da362f0-7773-4f92-a797-605cbd0df794.png">
+</p>
 
+**final track
+**
 ### **Evaluating the Model**
 
 ## Discussion
