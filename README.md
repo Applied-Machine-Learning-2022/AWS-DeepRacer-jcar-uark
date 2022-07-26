@@ -165,7 +165,7 @@ After the training had completed, we evaluated the model using the same track th
 
 <h4 align="center"> Evaluation Results Table </h4>
 <p align="center">
-<img width="460" src="https://user-images.githubusercontent.com/106926636/180808030-ccb2eee6-9186-4bfb-9d8a-09e56a7c4e0c.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/90020418/181087624-b24572d1-bb97-4201-a063-41c841f00e94.png">
 </p>
 
 ## Physical Testing
