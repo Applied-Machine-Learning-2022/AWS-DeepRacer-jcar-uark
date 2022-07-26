@@ -47,6 +47,11 @@ The screenshot below shows the training configuration for the final model. This 
 
 ## Elements of Reward Function
 ### **Initializing parameters**
+<h4 align="center"> List of Variables for the Reward Function </h4>
+<p align="center">
+<img width="760" src="https://user-images.githubusercontent.com/90020418/181075834-6ca9f931-54c6-47ab-854c-37ad8681199e.png">
+</p>
+
 The following code block shows the first few lines for the reward function. Here, we give a brief summary of the reward function's incentives and penalties. We also read the input parameters to memory in order to use them throughout the rest of the function. After we read in the parameters, we create three variables that hold values that we will later use to incentivize staying near center line of the track. We created thresholds and initialized the reward value in the final part of this code block.
 
 ```python
