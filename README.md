@@ -34,6 +34,18 @@ Give details on how to install fork and install your project. You can get all of
 4. Paste the reward function code into AWS and train & evaluate the model
 
 ## Final Model: Training Configuration
+<h4 align="center"> re:Invent 2018 track </h4>
+<p align="center">
+<img width="760" src="https://user-images.githubusercontent.com/90020418/181056919-da40df12-8db0-4f6e-9d47-897023ded8ca.png">
+</p>
+
+Training happens through an iterative process of simulation to gather experience, followed by training on the experience to update your model, followed by simulation using the new model to get new experience, followed by training on the new experience to update your model and so forth. Initially your model does not have any knowledge of which actions will lead to good outcomes. It will choose actions at random as it explores the environment. Over time it will learn which actions are better and start to exploit these. How quickly it exploits or how long it explores is a trade-off that you have to make.
+
+<h4 align="center"> Hyperparameters for RL Optimization Algorithm </h4>
+<p align="center">
+<img width="760" src="https://user-images.githubusercontent.com/90020418/181080222-f37fc031-cf29-4fca-9aba-dddb3daa9dfa.png">
+</p>
+
 The screenshot below shows the training configuration for the final model. This includes the action space, which is where we set the maximum and minimum speeds for the agent, as well as the maximum and minimum steering angles. Additionally, the screenshot shows the settings for the hyperparameters, which were not altered for the final model. A separate model, using the same reward function but an increased gradient descent batch size, number of experience episodes between each policy-updating iteration, and decreased learning rate led to much more consistent training, but slower peformance upon evaluation.
 
 <p align="center">
@@ -41,7 +53,13 @@ The screenshot below shows the training configuration for the final model. This 
 </p>
 
 ## Elements of Reward Function
+
 ### **Initializing parameters**
+<h4 align="center"> List of Variables for the Reward Function </h4>
+<p align="center">
+<img width="760" src="https://user-images.githubusercontent.com/90020418/181075834-6ca9f931-54c6-47ab-854c-37ad8681199e.png">
+</p>
+
 The following code block shows the first few lines for the reward function. Here, we give a brief summary of the reward function's incentives and penalties. We also read the input parameters to memory in order to use them throughout the rest of the function. After we read in the parameters, we create three variables that hold values that we will later use to incentivize staying near center line of the track. We created thresholds and initialized the reward value in the final part of this code block.
 
 ```python
@@ -143,12 +161,12 @@ After the training had completed, we evaluated the model using the same track th
 
 <h4 align="center"> Evaluation Video </h4>
 <p align="center">
-video goes here ***
+    <video src="https://user-images.githubusercontent.com/90020418/181086640-ec3cd213-d36f-46be-826c-a71195dccb38.mp4">
 </p>
 
 <h4 align="center"> Evaluation Results Table </h4>
 <p align="center">
-<img width="460" src="https://user-images.githubusercontent.com/106926636/180808030-ccb2eee6-9186-4bfb-9d8a-09e56a7c4e0c.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/90020418/181087624-b24572d1-bb97-4201-a063-41c841f00e94.png">
 </p>
 
 ## Physical Testing
