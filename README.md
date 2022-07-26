@@ -39,6 +39,13 @@ Give details on how to install fork and install your project. You can get all of
 <img width="760" src="https://user-images.githubusercontent.com/90020418/181056919-da40df12-8db0-4f6e-9d47-897023ded8ca.png">
 </p>
 
+Training happens through an iterative process of simulation to gather experience, followed by training on the experience to update your model, followed by simulation using the new model to get new experience, followed by training on the new experience to update your model and so forth. Initially your model does not have any knowledge of which actions will lead to good outcomes. It will choose actions at random as it explores the environment. Over time it will learn which actions are better and start to exploit these. How quickly it exploits or how long it explores is a trade-off that you have to make.
+
+<h4 align="center"> Hyperparameters for RL Optimization Algorithm </h4>
+<p align="center">
+<img width="760" src="https://user-images.githubusercontent.com/90020418/181080222-f37fc031-cf29-4fca-9aba-dddb3daa9dfa.png">
+</p>
+
 The screenshot below shows the training configuration for the final model. This includes the action space, which is where we set the maximum and minimum speeds for the agent, as well as the maximum and minimum steering angles. Additionally, the screenshot shows the settings for the hyperparameters, which were not altered for the final model. A separate model, using the same reward function but an increased gradient descent batch size, number of experience episodes between each policy-updating iteration, and decreased learning rate led to much more consistent training, but slower peformance upon evaluation.
 
 <p align="center">
