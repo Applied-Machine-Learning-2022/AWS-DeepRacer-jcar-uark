@@ -20,11 +20,12 @@ According to the "Capstone Projects" pdf, which introduced us to the possible fi
 
 ## Intro to Reinforcement Learning
 Reinforcement Learning differs from the other 2 basic Machine Learning paradigms (Supervised & Unsupervised). A specific difference we can point to between Reinforcement Learning and Supervised Learning is the unecessary input/output labellings as RL algorithms typically use dynamic programming techniques with the goal of automatically improving through reward maximization. 
+
+Reinforcement Learning differs from the other 2 basic Machine Learning paradigms (Supervised & Unsupervised). A specific difference we can point to between Reinforcement Learning and Supervised Learning is the unecessary input/output labellings as RL algorithms typically use dynamic programming techniques with the goal of automatically improving through reward maximization. 
+
 <p align="center">
 <img width="405" alt="image" src="https://user-images.githubusercontent.com/90020418/181265419-ac886d45-a2e5-4bec-9a15-841123f5a867.png">
 </p>
-
-Reinforcement Learning differs from the other 2 basic Machine Learning paradigms (Supervised & Unsupervised). A specific difference we can point to between Reinforcement Learning and Supervised Learning is the unecessary input/output labellings as RL algorithms typically use dynamic programming techniques with the goal of automatically improving through reward maximization. 
 
 ## Dataset
 The dataset our autonomous vehicle will use is the live sensor data it extracts which is used to train our model to determine the correct (highest reward) action via our reward function. This automatic *trial-and-error* process will give us a model that can respond to similar environments as our training with the same actions deemed correct by the algorithm. 
