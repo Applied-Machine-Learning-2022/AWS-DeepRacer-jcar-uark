@@ -191,8 +191,9 @@ The entire goal of the AWS DeepRacer project is the train a Reinforcement Learni
 
 We completed the assembly of our AWS DeepRacer Car using the instructions on [Amazon's Guide](https://aws.amazon.com/deepracer/getting-started/). After building the car we had to connect and calibrate it using a WiFi network to access the car's control panel for uploading and running our model. Below is a screenshot of the control panel for the robot.
 <p align="center">
-    <img width="750" alt="image" src="">
+    <img width="750" alt="image" src="https://user-images.githubusercontent.com/90020418/181585081-f52a3bb5-4398-4c4b-bc74-06445f9243dc.png">
 </p>
+
 
 ### **Building the Track**
 <h4 align="center">re:Invent 2018 Track Template</h4>
