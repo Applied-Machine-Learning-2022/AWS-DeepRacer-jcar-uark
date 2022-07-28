@@ -191,17 +191,22 @@ The entire goal of the AWS DeepRacer project is the train a Reinforcement Learni
 
 We completed the assembly of our AWS DeepRacer Car using the instructions on [Amazon's Guide](https://aws.amazon.com/deepracer/getting-started/). After building the car we had to connect and calibrate it using a WiFi network to access the car's control panel for uploading and running our model. Below is a screenshot of the control panel for the robot.
 <p align="center">
-    <img width="750" alt="image" src="https://user-images.githubusercontent.com/90020418/181287036-b55f824a-d153-4c83-9190-ca41b82bccce.jpg">
+    <img width="750" alt="image" src="">
 </p>
 
 ### **Building the Track**
 <h4 align="center">re:Invent 2018 Track Template</h4>
 <p align="center">
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/90020418/181114569-9da362f0-7773-4f92-a797-605cbd0df794.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/90020418/181532940-cc935b7f-8648-4d72-b058-ec64fc8ecd88.png">
 </p>
 
-**final track
-**
+With our time constraints and the high price and lack of availability of materials, we were not able to construct a full track but rather completed a subset of the track which was the left hand side (boxed in green above).
+
+<h4 align="center">Final Track Subset</h4>
+<p align="center">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/90020418/181529698-0e6e03e5-01b6-4e67-8247-5ed24c2ce303.jpg">
+</p>
+
 ### **Evaluating the Model**
 
 ## Discussion
