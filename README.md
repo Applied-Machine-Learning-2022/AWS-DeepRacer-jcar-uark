@@ -213,8 +213,9 @@ Through the AWS DeepRacer control panel, we imported our best trained model that
 
 <h4 align="center">Successful Physical Run</h4>
 <p align="center">
-<video src="https://user-images.githubusercontent.com/90020418/1s81621481-4a10dd0e-2bf3-4f06-a64c-17880e22a558.mp4">
+<video src="https://user-images.githubusercontent.com/90020418/181622779-c2edcca6-34b6-463f-842f-a35e2d8207a6.mp4">
 </p>
+    
 
 ## Discussion
 There are a lot of things to consider... (include elements of & references to Ethical Considerations, talk about the difficult differences in virtual & physical, and provide some possible goals given more time as we were limited on time & money for a project that could take many months of fine-tuning).
