@@ -209,6 +209,12 @@ With our time constraints and the high price and lack of availability of materia
 </p>
 
 ### **Evaluating the Model**
+Through the AWS DeepRacer control panel, we imported our best trained model that we had previously evaluated virtually (as shown earlier). Due to wifi limitations as well as the imperfect track conditions, we had to limit our vehicle's speed to ~50% which is why the run is not nearly as fast as the virtual. We can see in this video that the model seemed to be able to handle 110° and 78° turns as well as speed up on a straight-away.
+
+<h4 align="center">Successful Physical Run</h4>
+<p align="center">
+<video src="https://user-images.githubusercontent.com/90020418/1s81621481-4a10dd0e-2bf3-4f06-a64c-17880e22a558.mp4">
+</p>
 
 ## Discussion
 There are a lot of things to consider... (include elements of & references to Ethical Considerations, talk about the difficult differences in virtual & physical, and provide some possible goals given more time as we were limited on time & money for a project that could take many months of fine-tuning).
