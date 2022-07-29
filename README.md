@@ -16,11 +16,9 @@ Developed by:
 - [Cris Torres](https://github.com/CristopherTorres1) - `Penn State University`
 
 ## Project Description
-According to the "Capstone Projects" pdf, which introduced us to the possible final projects, the goal for the AWS DeepRacer Project is to "**train a 1/18th" scale car to race autonomously using Reinforcement Learning.**"
+According to the "Capstone Projects" pdf, which introduced us to the possible final projects, the goal for the AWS DeepRacer Project is to "**train a 1/18th scale car to race autonomously using Reinforcement Learning.**"
 
 ## Intro to Reinforcement Learning
-Reinforcement Learning differs from the other 2 basic Machine Learning paradigms (Supervised & Unsupervised). A specific difference we can point to between Reinforcement Learning and Supervised Learning is the unecessary input/output labellings as RL algorithms typically use dynamic programming techniques with the goal of automatically improving through reward maximization. 
-
 Reinforcement Learning differs from the other 2 basic Machine Learning paradigms (Supervised & Unsupervised). A specific difference we can point to between Reinforcement Learning and Supervised Learning is the unecessary input/output labellings as RL algorithms typically use dynamic programming techniques with the goal of automatically improving through reward maximization. 
 
 <p align="center">
