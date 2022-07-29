@@ -43,7 +43,7 @@ MDP and RL can get very complicated and this basic/relevant information is only 
 </p>
 
 <p align="center">
-<img width="405" alt="image" src="https://user-images.githubusercontent.com/90020418/181265419-ac886d45-a2e5-4bec-9a15-841123f5a867.png">
+<img width="405" alt="image" src="https://user-images.githubusercontent.com/90020418/181693927-150ff775-d225-44a0-b0fd-2edae0da4e1b.png">
 </p>
 
 - The simulated environment updates the agent's position based on the agent action and returns a reward and an updated camera image. 
