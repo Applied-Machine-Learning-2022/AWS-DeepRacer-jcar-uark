@@ -93,4 +93,3 @@ One of  the issues we had with this project was the physical car itself. Though 
 
 The tested AWS model was able to successfully run the track virtually, and a segment of the track physically. Within the parameters of this project, the scaled-down model was precise enough to safely make it through the tracks without any major crashes. Our model was not perfect however, the speed of the physical model was lackluster during its few runs. This comes to no surprise since the main limiting factor was time. Given more time we could have worked with different tracks and models to see the adaptability of our vehicle. These results would have been interesting to study since different models could have been better on certain sets. Having a foundational code for autonomous driving like the AWS car provided could be used in larger projects and studies to help further self-driving.
 
-
