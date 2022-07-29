@@ -38,14 +38,14 @@ Give details on how to install fork and install your project. You can get all of
 4. Paste the reward function code into AWS and train & evaluate the model
 
 ## Final Model: Training Configuration
-<h4 align="center"> re:Invent 2018 track </h4>
+<h4 align="center"> <b> re:Invent 2018 track </b> </h4>
 <p align="center">
 <img width="760" src="https://user-images.githubusercontent.com/90020418/181056919-da40df12-8db0-4f6e-9d47-897023ded8ca.png">
 </p>
 
 Training happens through an iterative process of simulation to gather experience, followed by training on the experience to update your model, followed by simulation using the new model to get new experience, followed by training on the new experience to update your model and so forth. Initially your model does not have any knowledge of which actions will lead to good outcomes. It will choose actions at random as it explores the environment. Over time it will learn which actions are better and start to exploit these. How quickly it exploits or how long it explores is a trade-off that you have to make.
 
-<h4 align="center"> Hyperparameters for RL Optimization Algorithm </h4>
+<h4 align="center"> <b> Hyperparameters for RL Optimization Algorithm </b></h4>
 <p align="center">
 <img width="760" src="https://user-images.githubusercontent.com/90020418/181080222-f37fc031-cf29-4fca-9aba-dddb3daa9dfa.png">
 </p>
@@ -59,7 +59,7 @@ The screenshot below shows the training configuration for the final model. This 
 ## Elements of Reward Function
 
 ### **Initializing parameters**
-<h4 align="center"> List of Variables for the Reward Function </h4>
+<h4 align="center"> <b> List of Variables for the Reward Function </b></h4>
 <p align="center">
 <img width="760" src="https://user-images.githubusercontent.com/90020418/181075834-6ca9f931-54c6-47ab-854c-37ad8681199e.png">
 </p>
@@ -166,12 +166,12 @@ The reward graph shows the model's progress as it trains. It is a line graph wit
 ## Testing Evaluation
 After the training had completed, we evaluated the model using the same track that it trained on. The AWS Console allows us to perform multiple evaluations. Below, we show the result and a video of our best evaluation that we performed, where the agent drove three laps around the track during each evaluation.
 
-<h4 align="center"> Evaluation Video </h4>
+<h4 align="center"> <b> Evaluation Video </b> </h4>
 <p align="center">
     <video width="800" src="https://user-images.githubusercontent.com/90020418/181086640-ec3cd213-d36f-46be-826c-a71195dccb38.mp4">
 </p>
 
-<h4 align="center"> Evaluation Results Table </h4>
+<h4 align="center"> <b> Evaluation Results Table </b></h4>
 <p align="center">
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/90020418/181087624-b24572d1-bb97-4201-a063-41c841f00e94.png">
 </p>
@@ -180,12 +180,12 @@ After the training had completed, we evaluated the model using the same track th
 The entire goal of the AWS DeepRacer project is the train a Reinforcement Learning model that can be inputted into a vehicle in the real-world. To truly test our model we built the vehicle with all the necessary sensors to collect data and extract the parameters for running our trained model from earlier.
 
 ### **Building the Robot**
-<h4 align="center"> Unboxed AWS DeepRacer Kit </h4>
+<h4 align="center"> <b> Unboxed AWS DeepRacer Kit </b> </h4>
 <p align="center">
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/90020418/181102800-a5562416-1b2e-47a3-8898-0e74327669ab.jpeg">
 </p>
 
-<h4 align="center"> Assembled Car </h4>
+<h4 align="center"> <b> Assembled Car </b></h4>
 <p align="center">
     <img width="500" alt="image" src="https://user-images.githubusercontent.com/90020418/181287036-b55f824a-d153-4c83-9190-ca41b82bccce.jpg">
 </p>
@@ -197,14 +197,14 @@ We completed the assembly of our AWS DeepRacer Car using the instructions on [Am
 
 
 ### **Building the Track**
-<h4 align="center">re:Invent 2018 Track Template</h4>
+<h4 align="center"> <b> re:Invent 2018 Track Template </b></h4>
 <p align="center">
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/90020418/181532940-cc935b7f-8648-4d72-b058-ec64fc8ecd88.png">
 </p>
 
 With our time constraints and the high price and lack of availability of materials, we were not able to construct a full track but rather completed a subset of the track which was the left hand side (boxed in green above).
 
-<h4 align="center">Final Track Subset</h4>
+<h4 align="center"> <b> Final Track Subset </b></h4>
 <p align="center">
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/90020418/181529698-0e6e03e5-01b6-4e67-8247-5ed24c2ce303.jpg">
 </p>
@@ -212,7 +212,7 @@ With our time constraints and the high price and lack of availability of materia
 ### **Evaluating the Model**
 Through the AWS DeepRacer control panel, we imported our best trained model that we had previously evaluated virtually (as shown earlier). Due to wifi limitations as well as the imperfect track conditions, we had to limit our vehicle's speed to ~50% which is why the run is not nearly as fast as the virtual. We can see in this video that the model seemed to be able to handle 110° and 78° turns as well as speed up on a straight-away.
 
-<h4 align="center">Successful Physical Run</h4>
+<h4 align="center"> <b> Successful Physical Run </b></h4>
 <p align="center">
 <video width="800" src="https://user-images.githubusercontent.com/90020418/181622779-c2edcca6-34b6-463f-842f-a35e2d8207a6.mp4">
 </p>

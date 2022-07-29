@@ -21,6 +21,36 @@ Train a 1/18th scale AWS car to race autonomously using a Reinforcement Learning
 #### What is **Reinforcement Learning**?
 Reinforcement Learning is a subset of Machine learning yet it differs from the other 2 basic Machine Learning paradigms (Supervised & Unsupervised). A specific difference we can point to between Reinforcement Learning and Supervised Learning is the unecessary input/output labellings as RL algorithms typically use dynamic programming techniques with the goal of automatically improving through reward maximization.
 
+The formal definition of RL is "*an area of machine learning concerned with how intelligent agents ought to take actions in an environment in order to maximize the notion of cumulative reward.*" The basis of most Reinforcement Learning algorithms is the Markov Decision Process which is an extension of Markov Chains. Below is a labelled value iteration function which is the mathematical formula that is occuring behind the scenes for how our agent determines which actions are "better" than others at any given moment. 
+
+<p align="center">
+<img width="600" alt="image" src="https://miro.medium.com/max/1400/0*PJrz4aTgVmd1f15A">
+</p>
+
+MDP and RL can get very complicated and this basic/relevant information is only the surface of those topics so if you'd like to read more about it, checkout the links under the `Resources` header. On the note of Reinforcement Learning, it's important to understand how the AWS DeepRacer works [behind the scenes](https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-how-it-works-solution-workflow.html) to apply these concepts.
+
+- The AWS DeepRacer service initializes the simulation with a virtual track, an agent representing the vehicle, and the background. 
+
+<p align="center">
+<img width="405" alt="image" src="https://user-images.githubusercontent.com/90020418/181265419-ac886d45-a2e5-4bec-9a15-841123f5a867.png">
+</p>
+
+- The agent embodies a policy neural network that can be tuned with hyper-parameters. The agent acts (as specified with a steering angle and a speed) based on a given state (represented by an image from the front camera). 
+
+<h4 align="center"> <b> Hyperparameters for RL Optimization Algorithm </b></h4>
+<p align="center">
+<img width="760" src="https://user-images.githubusercontent.com/90020418/181080222-f37fc031-cf29-4fca-9aba-dddb3daa9dfa.png">
+</p>
+
+<p align="center">
+<img width="405" alt="image" src="https://user-images.githubusercontent.com/90020418/181265419-ac886d45-a2e5-4bec-9a15-841123f5a867.png">
+</p>
+
+- The simulated environment updates the agent's position based on the agent action and returns a reward and an updated camera image. 
+- The experiences collected in the form of state, action, reward, and new state are used to update the neural network periodically. The updated network models are used to create more experiences.
+- The AWS DeepRacer service periodically saves the neural network model to persistent storage.
+
+
 ## Problem Space
 &emsp;With companies like Tesla and Google paving the way for autonomous driving, machine learning has only continued to make strides towards a more automated future of 
 travel. The reinforcement learning model for the AWS car was built to maximize accuracy in order for the vehicle to successfully complete a track autonomously. The 
@@ -112,4 +142,11 @@ ended up using for the physical car. The values for the hyperparameters and acti
 ## Conclusion
 
 &emsp;The tested AWS model was able to successfully run the track virtually, and a segment of the track physically. Within the parameters of this project, the scaled-down model was precise enough to safely make it through the tracks without any major crashes. Our model was not perfect however, the speed of the physical model was lackluster during its few runs. This comes to no surprise since the main limiting factor was time. Given more time we could have worked with different tracks and models to see the adaptability of our vehicle. These results would have been interesting to study since different models could have been better on certain sets. Having a foundational code for autonomous driving like the AWS car provided could be used in larger projects and studies to help further self-driving.
+
+## Resources
+- https://www.baeldung.com/cs/mdp-value-iteration
+- https://towardsdatascience.com/reinforcement-learning-101-e24b50e1d292
+- https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-how-it-works-action-space.html
+- https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-how-it-works-solution-workflow.html
+
 
