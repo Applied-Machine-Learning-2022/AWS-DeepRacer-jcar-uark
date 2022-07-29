@@ -19,9 +19,8 @@ Developed by:
 According to the "Capstone Projects" pdf, which introduced us to the possible final projects, the goal for the AWS DeepRacer Project is to "**train a 1/18th" scale car to race autonomously using Reinforcement Learning.**"
 
 ## Intro to Reinforcement Learning
-Reinforcement Learning differs from the other 2 basic Machine Learning paradigms (Supervised & Unsupervised). A specific difference we can point to between Reinforcement Learning and Supervised Learning is the unecessary input/output labellings as RL algorithms typically use dynamic programming techniques with the goal of automatically improving through reward maximization. 
+Reinforcement Learning differs from the other 2 basic Machine Learning paradigms (Supervised & Unsupervised). A specific difference we can point to between Reinforcement Learning and Supervised Learning is the unnecessary input/output labelings as RL algorithms typically use dynamic programming techniques with the goal of automatically improving through reward maximization. 
 
-Reinforcement Learning differs from the other 2 basic Machine Learning paradigms (Supervised & Unsupervised). A specific difference we can point to between Reinforcement Learning and Supervised Learning is the unecessary input/output labellings as RL algorithms typically use dynamic programming techniques with the goal of automatically improving through reward maximization. 
 
 <p align="center">
 <img width="405" alt="image" src="https://user-images.githubusercontent.com/90020418/181265419-ac886d45-a2e5-4bec-9a15-841123f5a867.png">
