@@ -42,6 +42,7 @@ MDP and RL can get very complicated and this basic/relevant information is only 
 <img width="760" src="https://user-images.githubusercontent.com/90020418/181080222-f37fc031-cf29-4fca-9aba-dddb3daa9dfa.png">
 </p>
 
+<h4 align="center"> <b> Action Space for Model to choose from </b></h4>
 <p align="center">
 <img width="405" alt="image" src="https://user-images.githubusercontent.com/90020418/181693927-150ff775-d225-44a0-b0fd-2edae0da4e1b.png">
 </p>
