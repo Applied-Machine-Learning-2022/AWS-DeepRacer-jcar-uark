@@ -87,7 +87,8 @@ Our model is used to train the AWS car to self-drive over a miniature track. Mor
 
 ## Improvements
 
-One of  the issues we had with this project was the physical car itself. Though we were able to make the virtual model to work, we had a problem getting the physical model to run. The first problem we encountered was trying to find a physical hard drive big enough to hold the model. Another problem we had was to get it connected to the internet. Since the regular Uark wifi was unavailable, we used the guest wifi as a substitute. This ended up being a mistake as the guest wifi would not allow us to work.
+One of  the issues we had with this project was the physical car itself. Though we were able to make the virtual model to work, we had a problem getting the physical model to run. The first problem we encountered was trying to find a physical hard drive big enough to hold the model. Another problem we had was to get it connected to the internet. Since the regular Uark wifi was unavailable, we used the guest wifi as a substitute. This ended up being a mistake as the guest wifi would not allow us to work. We eventually got help from the staff to be able to connect to the wifi and be able to do a physical test. 
+
 
 ## Conclusion
 
