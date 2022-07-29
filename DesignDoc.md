@@ -15,7 +15,7 @@ Train a 1/18th scale AWS car to race autonomously using a Reinforcement Learning
 ## Background
 
 <p align="center">
-<img width="600" alt="image" src="">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/90020418/181690312-b2c0686f-72c7-4f2e-bea4-51a78c9074e2.png">
 </p>
 
 #### What is **Reinforcement Learning**?
